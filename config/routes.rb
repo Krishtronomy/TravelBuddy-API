@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   post "/create", to: "posts#create"
   put "/posts/:id", to: "posts#update"
   delete "/posts/:id", to: "posts#destroy"
+  post '/sign_up', to: 'users#create'
+  post 'sign_in', to: 'users#sign_in'
 end

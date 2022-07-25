@@ -27,3 +27,25 @@ Content-Type: application/json
 
 ### Delete method -  Delete post by ID
 DELETE http://localhost:3050/posts/8
+
+
+### Create a user
+POST http://localhost:3050/sign_up/
+Content-Type: application/json
+
+{
+    "username": "test3",
+    "email": "test3@test.com",
+    "password": "test3",
+    "password_confirmation": "test3"
+}
+
+
+### Sign in with Correct details
+POST http://localhost:3050/sign_in/
+Content-Type: application/json
+
+{
+    "email": "test3@test.com",
+    "password": "test3"
+}
