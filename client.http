@@ -1,12 +1,12 @@
 ### Index method - Show all posts
-GET http://localhost:3000/posts
+GET http://localhost:3050/posts
 
 
 ### Show method - Show post by post_id
-http://localhost:3000/posts/7
+http://localhost:3050/posts/7
 
 ### Create method - Create new post
-POST http://localhost:3000/create
+POST http://localhost:3050/create
 Content-Type: application/json
 
 {
@@ -16,7 +16,7 @@ Content-Type: application/json
 }
 
 ### Update method - Update existing post
-PUT http://localhost:3000/posts/9
+PUT http://localhost:3050/posts/9
 Content-Type: application/json
 
 {
@@ -26,4 +26,4 @@ Content-Type: application/json
 }
 
 ### Delete method -  Delete post by ID
-DELETE http://localhost:3000/posts/8
+DELETE http://localhost:3050/posts/8
