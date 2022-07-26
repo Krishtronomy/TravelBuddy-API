@@ -1,12 +1,12 @@
 ### Index method - Show all posts
-GET http://localhost:3000/posts
+GET http://localhost:3050/posts
 
 
 ### Show method - Show post by post_id
-http://localhost:3000/posts/7
+http://localhost:3050/posts/4
 
 ### Create method - Create new post
-POST http://localhost:3000/create
+POST http://localhost:3050/create
 Content-Type: application/json
 
 {
@@ -15,9 +15,21 @@ Content-Type: application/json
     "rating": 3
 }
 
-### Update method - Update existing post
-PUT http://localhost:3000/posts/9
+### Create method - Create new post as Authorised/Logged in User
+POST http://localhost:3050/create
 Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTg4NDAxNjYsInN1YiI6M30.pvfdzA0BXbfCjruIRRV1ZQ9CO_sKfr7q77Lgs123pQg
+
+{
+    "title": "New post",
+    "description": "New post created from post method",
+    "rating": 3
+}
+
+### Update method - Update existing post
+PUT http://localhost:3050/posts/5
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTg4NDAxNjYsInN1YiI6M30.pvfdzA0BXbfCjruIRRV1ZQ9CO_sKfr7q77Lgs123pQg
 
 {
     "title": "Updated post",
@@ -26,4 +38,27 @@ Content-Type: application/json
 }
 
 ### Delete method -  Delete post by ID
-DELETE http://localhost:3000/posts/8
+DELETE http://localhost:3050/posts/5
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTg4NDAxNjYsInN1YiI6M30.pvfdzA0BXbfCjruIRRV1ZQ9CO_sKfr7q77Lgs123pQg
+
+
+### Create a user
+POST http://localhost:3050/sign_up/
+Content-Type: application/json
+
+{
+    "username": "test3",
+    "email": "test3@test.com",
+    "password": "test3",
+    "password_confirmation": "test3"
+}
+
+
+### Sign in with Correct details
+POST http://localhost:3050/sign_in/
+Content-Type: application/json
+
+{
+    "email": "test3@test.com",
+    "password": "test3"
+}

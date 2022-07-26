@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
-before_action :set_post, only: [:show, :update, :destroy]
+    before_action :authenticate_user, except: [:index, :show]
+    before_action :set_post, only: [:show, :update, :destroy]
+    before_action :authorise_user, only: [:update, :destroy]
 
     def index
         @posts = Post.all
@@ -8,14 +10,14 @@ before_action :set_post, only: [:show, :update, :destroy]
 
     def show
         if @post
-            render json: @post
+            render json: @post.transform_post
         else
             render json: {"error": "Post not found, wrong id"}, status: :not_found
         end
     end
 
     def create
-        @post = Post.create(post_params)
+        @post = current_user.posts.create(post_params)
         if @post.errors.any? 
             render json: @post.errors, status: :unprocessable_entity
         else  
@@ -25,10 +27,17 @@ before_action :set_post, only: [:show, :update, :destroy]
 
     def update
         @post.update(post_params)
+
+        if @post.errors.any?
+            render json: @post.errors, status: :unprocessable_entity
+        else
+            render json: @post, status: 201
+        end
     end
 
     def destroy
         @post.delete
+        render json: @post, status: 204
     end
 
     private
@@ -40,9 +49,15 @@ before_action :set_post, only: [:show, :update, :destroy]
 
     def set_post
         begin
-        @post = Post.find_by_id(params[:id])
+        @post = Post.find(params[:id])
         rescue
             render json: {error: "Post not found"}, status: 404
+        end
+    end
+
+    def authorise_user
+        if current_user.id != @post.user.id
+            render json: {error: "You don't have permission to do that"}, status: 401
         end
     end
 end
