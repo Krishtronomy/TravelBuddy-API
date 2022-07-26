@@ -37,6 +37,7 @@ class PostsController < ApplicationController
 
     def destroy
         @post.delete
+        render json: @post, status: 204
     end
 
     private

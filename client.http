@@ -38,7 +38,8 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTg4NDAxN
 }
 
 ### Delete method -  Delete post by ID
-DELETE http://localhost:3050/posts/8
+DELETE http://localhost:3050/posts/5
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTg4NDAxNjYsInN1YiI6M30.pvfdzA0BXbfCjruIRRV1ZQ9CO_sKfr7q77Lgs123pQg
 
 
 ### Create a user
