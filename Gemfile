@@ -43,3 +43,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "net-smtp", "~> 0.3.1"
 
 gem 'rubocop', require: false
+
+gem "aws-sdk-s3", "~> 1.114"
