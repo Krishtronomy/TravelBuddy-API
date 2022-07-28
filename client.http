@@ -3,7 +3,7 @@ GET http://localhost:3050/posts
 
 
 ### Show method - Show post by post_id
-http://localhost:3050/posts/4
+http://localhost:3050/posts/2
 
 ### Create method - Create new post
 POST http://localhost:3050/create
@@ -18,7 +18,7 @@ Content-Type: application/json
 ### Create method - Create new post as Authorised/Logged in User
 POST http://localhost:3050/create
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTg4NDAxNjYsInN1YiI6M30.pvfdzA0BXbfCjruIRRV1ZQ9CO_sKfr7q77Lgs123pQg
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTg5OTAxNjcsInN1YiI6MX0.XbnxZ_UjnE5Unf2ZZE8dmaDV0FEIBJRlpjjCe2okxBw
 
 {
     "title": "New post",
@@ -38,8 +38,8 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTg4NDAxN
 }
 
 ### Delete method -  Delete post by ID
-DELETE http://localhost:3050/posts/5
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTg4NDAxNjYsInN1YiI6M30.pvfdzA0BXbfCjruIRRV1ZQ9CO_sKfr7q77Lgs123pQg
+DELETE http://localhost:3050/posts/3
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTkwMDc2NDcsInN1YiI6MX0.77vLJgUtRQvhFUSWF4QNumwadaL9CmSY2EmnyPP60oY
 
 
 ### Create a user
@@ -59,6 +59,6 @@ POST http://localhost:3050/sign_in/
 Content-Type: application/json
 
 {
-    "email": "test3@test.com",
-    "password": "test3"
+    "email": "test@test.com",
+    "password": "test"
 }

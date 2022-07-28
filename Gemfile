@@ -45,3 +45,9 @@ gem "net-smtp", "~> 0.3.1"
 gem 'rubocop', require: false
 
 gem "aws-sdk-s3", "~> 1.114"
+
+gem "active_model_serializers", "~> 0.10.13"
+
+gem "dotenv-rails", "~> 2.8"
+
+gem "jsonapi-serializer", "~> 2.2"
