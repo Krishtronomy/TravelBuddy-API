@@ -8,8 +8,8 @@
 
 
 if User.count == 0
-    User.create(username:"test", email: "test@test.com", password: "test", password_confirmation: "test")
-    User.create(username:"test2", email: "test2@test.com", password: "test2", password_confirmation: "test2")
+    User.create(username:"test", email: "test@test.com", password: "test", password_confirmation: "test", about: "Hi there I am test, I love testing things")
+    User.create(username:"Jerome", email: "jerome@test.com", password: "jerome", password_confirmation: "jerome", about: "Hi, I am Jerome and I love travelling and exploring new places.")
     User.create(username:"test3", email: "test3@test.com", password: "test3", password_confirmation: "test3")
     puts"Users successfully created"
 end

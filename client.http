@@ -38,8 +38,8 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTg4NDAxN
 }
 
 ### Delete method -  Delete post by ID
-DELETE http://localhost:3050/posts/3
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTkwMDc2NDcsInN1YiI6MX0.77vLJgUtRQvhFUSWF4QNumwadaL9CmSY2EmnyPP60oY
+DELETE http://localhost:3050/posts/7
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTkyMzI5MzgsInN1YiI6MX0.rkzDbu0YOqL9Mku5ExPMHDctu7COZPYP3rN78kJ6Xqw
 
 
 ### Create a user
@@ -62,3 +62,6 @@ Content-Type: application/json
     "email": "test@test.com",
     "password": "test"
 }
+
+### Get current logged in user
+GET http://localhost:3050/about
