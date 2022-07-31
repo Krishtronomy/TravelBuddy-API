@@ -59,9 +59,19 @@ POST http://localhost:3050/sign_in/
 Content-Type: application/json
 
 {
-    "email": "test@test.com",
+    "email": "hello@test.com",
     "password": "test"
 }
 
 ### Get current logged in user
 GET http://localhost:3050/about
+
+
+### Update Exisiting User:
+PUT http://localhost:3050/user/7/update
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTkzMjM5MTEsInN1YiI6N30.sWqf8ZscwojVXeH5kDiCOOi33-GdF9YHpdUv5vzJJfM
+
+{
+    "about": "whats good papi"
+}
