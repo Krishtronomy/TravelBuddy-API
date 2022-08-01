@@ -18,8 +18,8 @@ end
 if Post.count == 0 
     
     Post.create(title: "my first post", description: "This is my first post, thanks for coming", rating: 5, user_id: 1)
-    Post.create(title: "2nd post", description: "This is my 2nd post", rating: 3, user_id: 2)
-    Post.create(title: "Hey there", description: "Awesome stuff", rating: 5, user_id: 3)
-    Post.create(title: "Tasmania", description: "Great place", rating: 5, user_id: 1)
+    # Post.create(title: "2nd post", description: "This is my 2nd post", rating: 3, user_id: 2)
+    # Post.create(title: "Hey there", description: "Awesome stuff", rating: 5, user_id: 3)
+    # Post.create(title: "Tasmania", description: "Great place", rating: 5, user_id: 1)
     puts"Posts successfully created"
 end
