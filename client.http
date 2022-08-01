@@ -59,7 +59,7 @@ POST http://localhost:3050/sign_in/
 Content-Type: application/json
 
 {
-    "email": "hello@test.com",
+    "email": "test@test.com",
     "password": "test"
 }
 
@@ -75,3 +75,7 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTkzMjM5M
 {
     "about": "whats good papi"
 }
+
+
+### Get User Details
+GET http://localhost:3050/user/7
