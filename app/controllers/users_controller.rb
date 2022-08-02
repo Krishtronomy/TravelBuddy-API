@@ -2,7 +2,7 @@ class UsersController < ApplicationController
     before_action :set_user, only: [:update]
 
     def create
-        @user = User.create(user_params)
+        @user = User.create(user_params_create)
         if @user.save
             auth_token = Knock::AuthToken.new payload: {sub: @user.id}
             render json: {username: @user.username, jwt: auth_token.token}, status: :created
@@ -25,7 +25,7 @@ class UsersController < ApplicationController
     end
 
     def update
-        @user.update(user_params)
+        @user.update(user_params_update)
 
         if @user.errors.any?
             render json: @user.errors, status: :unprocessable_entity
@@ -41,10 +41,14 @@ class UsersController < ApplicationController
 
     private
 
-    def user_params
-        params.require(:user).permit(:username, :email, :password, :password_confirmation, :image, :id, :about)
+    def user_params_create
+        
+        params.permit(:username, :email, :password, :password_confirmation, :image, :id, :about)
     end
 
+    def user_params_update
+        params.require(:user).permit(:username, :email, :password, :password_confirmation, :image, :id, :about)
+    end
     def set_user
         begin
         @user = User.find(params[:id])
