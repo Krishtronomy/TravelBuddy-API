@@ -3,7 +3,7 @@ GET http://localhost:3050/posts
 
 
 ### Show method - Show post by post_id
-http://localhost:3050/posts/2
+http://localhost:3050/posts/30
 
 ### Create method - Create new post
 POST http://localhost:3050/create
@@ -27,12 +27,12 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTg5OTAxN
 }
 
 ### Update method - Update existing post
-PUT http://localhost:3050/posts/5
+PUT http://localhost:3050/posts/8
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTg4NDAxNjYsInN1YiI6M30.pvfdzA0BXbfCjruIRRV1ZQ9CO_sKfr7q77Lgs123pQg
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTk1ODM1OTMsInN1YiI6MX0.9J5Pfj8ol8hJLZyuRiDIWy3wP0pZwZYSb4MecYbIWTk
 
 {
-    "title": "Updated post",
+    "title": "Testing Edit function",
     "description": "Updated the post from put method",
     "rating": 4
 }
