@@ -4,6 +4,7 @@ class Post < ApplicationRecord
     validates_presence_of :description
     validates_presence_of :title
 
+    # Transform post with altered keys values
 def transform_post
     return {
         user_id: self.user_id,
@@ -17,6 +18,7 @@ def transform_post
     }
 end
 
+# Serialize image URL for S3 storage
 def image_url
     Rails.application.routes.url_helpers.url_for(image) if image.attached?
 end
