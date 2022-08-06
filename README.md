@@ -15,3 +15,6 @@
 
 ### Run Rails Server:
 `rails s`
+
+### Run automated tests:
+`rspec`
