@@ -46,7 +46,7 @@ RSpec.describe "/posts", type: :request do
 
 #tests creating a post with signing in as a authorised user
         it "creates a new message as its authorised with a user" do
-          post "/create", headers: authenticated_header(@test_user2), params: {post: {description: "Hello I have full access"}}
+          post "/create", headers: authenticated_header(@test_user2), params: {post: {title: "New title", description: "Hello I have full access"}}
           expect(response).to have_http_status(:created)
           expect(response).to have_http_status(201)
         end
