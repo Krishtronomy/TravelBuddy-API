@@ -8,7 +8,7 @@ end
 
 subject {
     described_class.new(
-
+        title: "Test Title 3000",
         description: "hi there, im just testing stuff",
         user: @test_user
     )

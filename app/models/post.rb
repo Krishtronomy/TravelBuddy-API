@@ -2,6 +2,7 @@ class Post < ApplicationRecord
     belongs_to :user
     has_one_attached :image
     validates_presence_of :description
+    validates_presence_of :title
 
 def transform_post
     return {
